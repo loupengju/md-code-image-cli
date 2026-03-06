@@ -1,6 +1,6 @@
 {
   "name": "md-code-image-cli",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Generate syntax-highlighted PNG images from Markdown fenced code blocks.",
   "license": "MIT",
   "repository": {
