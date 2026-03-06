@@ -1,0 +1,11 @@
+dist/
+.tmp-*/
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+*.log
+*.env
+*.cache
+*.tmp
+docs/
