@@ -1,0 +1,63 @@
+{
+  "name": "md-code-image-cli",
+  "version": "0.1.0",
+  "description": "Generate syntax-highlighted PNG images from Markdown fenced code blocks.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "md-code-image": "./dist/cli/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "keywords": [
+    "markdown",
+    "code",
+    "image",
+    "png",
+    "shiki",
+    "satori",
+    "cli"
+  ],
+  "files": [
+    "dist",
+    "fonts",
+    "LICENSE",
+    "LICENSES",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\" && tsc -p tsconfig.json",
+    "test": "vitest run",
+    "dev": "tsx src/cli/index.ts",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "commander": "^14.0.1",
+    "react": "^19.1.1",
+    "remark": "^15.0.1",
+    "remark-parse": "^11.0.0",
+    "satori": "^0.18.3",
+    "shiki": "^3.13.0",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@fontsource/noto-sans-sc": "^5.2.9",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
