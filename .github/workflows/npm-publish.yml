@@ -43,7 +43,7 @@ jobs:
             echo "version=$(npm run --silent version:bump)" >> "$GITHUB_OUTPUT"
           fi
       - run: npm run build
-      - run: npm publish --provenance
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Commit version update and tag after publish
